@@ -1,5 +1,5 @@
-# djangopkm
-SIP menggunakan Django Web Framework
+# mancinglauk
+manage and searching layanan untuk kesehatan
 
 ### pip dependensi
 - Django
