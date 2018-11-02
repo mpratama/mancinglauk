@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="id" >
+<head>
+<title>Laporan Generator</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+
+<body class=""
+  data-admin-utc-offset="32400">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name">Download File Excel(CSV) Laporan</h1>
+
+        </div>      
+        
+    </div>
+    <!-- END Header -->        
+    
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>Laporan yang dapat didownload terdiri dari 2:</h1>
+        <ul>
+        <li>Laporan Mentah, berisi data Tanggal Kunjungan, Nama Pasien, Diagnosa, Obat, Aturan Pakai Obat</li>
+        <li>Laporan Obat, berisi data Nama Obat, Total Penggunaan Obat</li>
+        </ul>
+    <p>Format tanggal dalam digit: TAHUN-BULAN-HARI</p>
+        
+<div id="content-main">
+<div class="module">
+
+<form action="lapotomatis/" method="post">
+    {% csrf_token %}
+    <div class="fieldBox field-alamat">
+
+
+                        <label class="required">Jenis Laporan: </label>
+
+                            <select name="jenis_laporan">
+
+  <option value="mentah" selected>Laporan Mentah</option>
+
+  <option value="obat">Laporan Obat</option>
+</select>
+</div><br>
+
+    <label>Tanggal Awal: </label>
+    <input type="text" name="tgl_awal" value="2018-10-01"><br>
+    <label>Tanggal Akhir: </label>
+    <input type="text" name="tgl_akhir" value="2018-10-30"></br>
+
+    <input type="submit" value="Download">
+</form>
+
+</div>
+</div>
+
+        
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+</body>
+</html>
+

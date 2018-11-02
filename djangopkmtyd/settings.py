@@ -25,7 +25,7 @@ SECRET_KEY = 'cdw)twvqt325d65dx9siuyhlfw_a%q#!#2i8-+g93%tadl+rs#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.43.92','localhost',]
+ALLOWED_HOSTS = ['192.168.43.92','localhost','tayando']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pendaftaran.apps.PendaftaranConfig',
     'apotek.apps.ApotekConfig',
+    'info.apps.InfoConfig',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'djangopkmtyd.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'DATABASE_PKM_YAMTEL.sqlite3'),
     }
 }
 

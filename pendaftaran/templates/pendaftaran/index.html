@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="id" >
+<head>
+<title>SIK PKM Tayando</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+
+<body class=""
+  data-admin-utc-offset="32400">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name">Sistem Informasi Puskesmas Tayando</h1>
+
+        </div>      
+        
+    </div>
+    <!-- END Header -->        
+    
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <p align="center"><h1><a href="pendaftaran/">Masuk</a></h1></p>
+        <p align="center"><h1><a href="laporan/">Download Laporan</a></h1></p>
+        
+<div id="content-main">
+<div class="module">
+
+</div>
+</div>
+
+        
+<!--        <br class="clear">--><hr>
+    <h3>Pengumuman :</h3>
+    {% if list_informasi %}
+    <table id="change-history">
+        <thead>
+        <tr>
+            <th scope="col">Tgl Info</th>
+            <th scope="col">Judul</th>
+            <th scope="col">Isi Info</th>
+        </tr>
+        </thead>
+        <tbody>
+        
+        
+        {% for info in list_informasi %}
+        <tr>
+            <td>{{ info.tanggal_informasi|date:"Y-m-d" }}</td>
+            <td>{{ info.judul }}</td>
+            <td>{{ info.isi|urlize|linebreaks }}</td>
+        </tr>
+        {% endfor %}
+        
+        </tbody>
+    </table>
+    {% else %}
+    <p>Belum ada info apapun</p>
+    {% endif %}
+    <small>©Pratama {{ tahun_sekarang }}</small>
+    </div>
+</div>
+<!-- END Container -->
+
+</body>
+</html>
+
